@@ -17,15 +17,16 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="site-header">
+<header class="navbar" id="navbar">
   <div class="wrap">
-    <nav class="site-nav" aria-label="Sections">
+    <a class="nav-name" href="#top">Hyuntak Lee</a>
+    <nav class="nav-links" aria-label="Sections">
       <a href="#about">About</a>
       <a href="#news">News</a>
       <a href="#publications">Publications</a>
@@ -36,89 +37,123 @@
 
 <main id="main">
 
-  <section class="intro" id="top">
-    <div class="wrap intro-grid">
-      <div class="intro-text">
-        <h1>Hyuntak Lee</h1>
-        <p class="role">
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="overline">Undergraduate researcher · Kyung Hee University</p>
+        <h1 class="hero-name">Hyuntak Lee</h1>
+        <p class="hero-role">
           B.S. student in Artificial Intelligence, Kyung Hee University<br>
-          Undergraduate research intern at the <a href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>,
-          advised by <a href="https://sites.google.com/site/jchoivision/">Jinwoo Choi</a>
+          Research intern at the <a href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>, advised by <a href="https://sites.google.com/site/jchoivision/">Prof. Jinwoo Choi</a>
         </p>
-        <p class="lede">I work on trustworthy video understanding: video models whose answers reflect what actually happens on screen. These days I'm working on latent world models.</p>
-        <ul class="links" aria-label="Links">
-          <li><a href="mailto:hyuntak03.lee@gmail.com">Email</a></li>
-          <li><a href="https://github.com/hyuntak03">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a></li>
-          <li><a href="https://vll.khu.ac.kr/">Lab</a></li>
+        <p class="hero-tagline">I work on <strong>trustworthy video understanding</strong>: video models whose answers reflect what actually happens on screen. These days I'm working on <strong>latent world models</strong>.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="mailto:hyuntak03.lee@gmail.com">Email</a>
+          <a class="btn btn-ghost" href="https://github.com/hyuntak03">GitHub</a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a>
+          <a class="btn btn-ghost" href="https://vll.khu.ac.kr/">Lab</a>
+        </div>
+        <ul class="hero-facts">
+          <li>
+            <span class="fact-label">Latest</span>
+            <span class="fact-value">NeurIPS 2026 · co-first author</span>
+          </li>
+          <li>
+            <span class="fact-label">Lab</span>
+            <span class="fact-value">Vision and Learning Lab, since Sep 2025</span>
+          </li>
+          <li>
+            <span class="fact-label">Now</span>
+            <span class="fact-value">Latent world models</span>
+          </li>
         </ul>
       </div>
-      <figure class="portrait">
-        <img src="assets/img/profile.svg" alt="Hyuntak Lee" width="168" height="168">
+      <figure class="hero-photo">
+        <img src="assets/img/profile.svg" alt="Hyuntak Lee" width="260" height="260">
       </figure>
     </div>
   </section>
 
   <section class="section" id="about">
     <div class="wrap">
-      <h2>About</h2>
-      <div class="prose">
-        <p>I'm an undergraduate at Kyung Hee University, majoring in Artificial Intelligence, where I started in March 2024. Since September 2025 I've been a research intern at the Vision and Learning Lab, working with Prof. Jinwoo Choi.</p>
-        <p>My interests are in trustworthy video understanding. I care about whether a video model's answer is grounded in what is actually in the video, what its internal representations encode, and where the two come apart. My current work is on latent world models. Before that, I worked with Jongseo Lee and others in the lab on motion perception in Video-LLMs: why they fail to tell which way an object moved, and how a small change during instruction tuning recovers most of it (DeltaDirect, NeurIPS 2026).</p>
+      <p class="section-label reveal">About</p>
+      <h2 class="section-title reveal">About me</h2>
+
+      <div class="about-grid">
+        <div class="about-bio reveal">
+          <p>I'm an undergraduate at <strong>Kyung Hee University</strong>, majoring in Artificial Intelligence, where I started in March 2024. Since September 2025 I've been a research intern at the <a href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>, working with <strong>Prof. Jinwoo Choi</strong>.</p>
+          <p>My interests are in <strong>trustworthy video understanding</strong>. I care about whether a video model's answer is grounded in what is actually in the video, what its internal representations encode, and where the two come apart. My current work is on <strong>latent world models</strong>.</p>
+          <p>Before that, I worked with Jongseo Lee and others in the lab on motion perception in Video-LLMs: why they fail to tell which way an object moved, and how a small change during instruction tuning recovers most of it (<a href="https://hyuntak03.github.io/DeltaDirect">DeltaDirect</a>, NeurIPS 2026).</p>
+        </div>
+
+        <aside class="about-side">
+          <div class="card reveal">
+            <h3 class="card-title">Education</h3>
+            <ul class="timeline">
+              <li>
+                <span class="tl-title">B.S. in Artificial Intelligence</span>
+                <span class="tl-meta">Kyung Hee University · Mar 2024 – present</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card reveal">
+            <h3 class="card-title">Experience</h3>
+            <ul class="timeline">
+              <li>
+                <span class="tl-title">Undergraduate research intern</span>
+                <span class="tl-meta">Vision and Learning Lab, Kyung Hee University · Sep 2025 – present</span>
+                <span class="tl-meta">Advisor: Prof. Jinwoo Choi · Undergraduate student chair</span>
+              </li>
+            </ul>
+          </div>
+        </aside>
       </div>
 
-      <h3 class="sub">Research interests</h3>
-      <ul class="interests">
-        <li><strong>Trustworthy video understanding.</strong> Video-language models whose answers are grounded in the video and can be checked against it.</li>
-        <li><strong>Latent world models.</strong> Learning representations that capture how a scene changes over time, so a model can reason about what happens next. This is what I'm working on now.</li>
-        <li><strong>Diagnosing Video-LLMs.</strong> Finding where a model's perception breaks, tracing the signal through the pipeline, and fixing it with the smallest change that works.</li>
-      </ul>
-
-      <h3 class="sub">Education</h3>
-      <ul class="cv">
-        <li>
-          <span class="when"><time datetime="2024-03">Mar 2024</time> – present</span>
-          <div>
-            <strong>B.S. in Artificial Intelligence, Kyung Hee University</strong>
-          </div>
-        </li>
-      </ul>
-
-      <h3 class="sub">Experience</h3>
-      <ul class="cv">
-        <li>
-          <span class="when"><time datetime="2025-09">Sep 2025</time> – present</span>
-          <div>
-            <strong>Undergraduate research intern, Vision and Learning Lab</strong>
-            <span>Kyung Hee University · Advisor: Prof. Jinwoo Choi · Undergraduate student chair</span>
-          </div>
-        </li>
-      </ul>
+      <h3 class="sub-title reveal">Research interests</h3>
+      <div class="ri-grid">
+        <div class="ri-card reveal">
+          <span class="ri-num">01</span>
+          <h4>Trustworthy video understanding</h4>
+          <p>Video-language models whose answers are grounded in the video and can be checked against it.</p>
+        </div>
+        <div class="ri-card reveal">
+          <span class="ri-num">02</span>
+          <h4>Latent world models</h4>
+          <p>Learning representations that capture how a scene changes over time, so a model can reason about what happens next. This is what I'm working on now.</p>
+        </div>
+        <div class="ri-card reveal">
+          <span class="ri-num">03</span>
+          <h4>Diagnosing Video-LLMs</h4>
+          <p>Finding where a model's perception breaks, tracing the signal through the pipeline, and fixing it with the smallest change that works.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section" id="news">
     <div class="wrap">
-      <h2>News</h2>
-      <ul class="news">
-        <li>
-          <span class="when"><time datetime="2026-09">Sep 2026</time></span>
-          <div>
-            <strong>Paper accepted to NeurIPS 2026.</strong>
-            <p><em>Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs</em>, co-first-authored with Jongseo Lee, will appear at NeurIPS 2026.</p>
+      <p class="section-label reveal">News</p>
+      <h2 class="section-title reveal">Recent news</h2>
+
+      <ul class="news-list">
+        <li class="news-item reveal">
+          <time class="news-date" datetime="2026-09">2026.09</time>
+          <div class="news-body">
+            <h3>Paper accepted to NeurIPS 2026 <span class="chip chip-venue">NeurIPS 2026</span></h3>
+            <p><em>Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs</em>, co-first-authored with <a href="https://jong980812.github.io/">Jongseo Lee</a>, will appear at NeurIPS 2026.</p>
           </div>
         </li>
-        <li>
-          <span class="when"><time datetime="2026-05">May 2026</time></span>
-          <div>
-            <strong>New preprint on arXiv.</strong>
+        <li class="news-item reveal">
+          <time class="news-date" datetime="2026-05">2026.05</time>
+          <div class="news-body">
+            <h3>New preprint on arXiv <span class="chip chip-soft">arXiv</span></h3>
             <p>We released <em>Which Way Did It Move?</em> on <a href="https://arxiv.org/abs/2605.22823">arXiv</a>, with a <a href="https://hyuntak03.github.io/DeltaDirect">project page</a> and <a href="https://github.com/KHU-VLL/DeltaDirect">code</a>.</p>
           </div>
         </li>
-        <li>
-          <span class="when"><time datetime="2025-09">Sep 2025</time></span>
-          <div>
-            <strong>Joined the Vision and Learning Lab.</strong>
+        <li class="news-item reveal">
+          <time class="news-date" datetime="2025-09">2025.09</time>
+          <div class="news-body">
+            <h3>Joined the Vision and Learning Lab</h3>
             <p>Started as an undergraduate research intern at Kyung Hee University, advised by Prof. Jinwoo Choi.</p>
           </div>
         </li>
@@ -128,15 +163,17 @@
 
   <section class="section" id="publications">
     <div class="wrap">
-      <h2>Publications</h2>
+      <p class="section-label reveal">Publications</p>
+      <h2 class="section-title reveal">Publications</h2>
+      <p class="pub-note reveal"><sup>*</sup> equal contribution</p>
 
-      <h3 class="sub">International conferences</h3>
+      <h3 class="pub-group reveal">International conferences</h3>
 
-      <article class="pub">
+      <article class="pub-card reveal">
         <a class="pub-thumb" href="https://hyuntak03.github.io/DeltaDirect" tabindex="-1" aria-hidden="true">
           <img src="assets/img/pub/deltadirect.png" alt="" width="1000" height="750" loading="lazy">
         </a>
-        <div class="pub-body">
+        <div class="pub-content">
           <h4 class="pub-title"><a href="https://hyuntak03.github.io/DeltaDirect">Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs</a></h4>
           <p class="pub-authors">
             <a href="https://jong980812.github.io/">Jongseo Lee</a><sup>*</sup>,
@@ -146,54 +183,54 @@
             Jihoon Chung,
             <a href="https://sites.google.com/site/jchoivision/">Jinwoo Choi</a>
           </p>
-          <p class="pub-venue">NeurIPS 2026</p>
-          <ul class="pub-links">
-            <li><a href="https://arxiv.org/abs/2605.22823">arXiv</a></li>
-            <li><a href="https://hyuntak03.github.io/DeltaDirect">Project page</a></li>
-            <li><a href="https://github.com/KHU-VLL/DeltaDirect">Code</a></li>
-            <li><button type="button" class="linklike fold-toggle" aria-expanded="false" aria-controls="abs-deltadirect">Abstract</button></li>
-            <li><button type="button" class="linklike fold-toggle" aria-expanded="false" aria-controls="bib-deltadirect">BibTeX</button></li>
-          </ul>
+          <p class="pub-venue"><span class="chip chip-venue">NeurIPS 2026</span></p>
+          <div class="pub-links">
+            <a class="btn btn-sm" href="https://arxiv.org/abs/2605.22823">arXiv</a>
+            <a class="btn btn-sm" href="https://hyuntak03.github.io/DeltaDirect">Project page</a>
+            <a class="btn btn-sm" href="https://github.com/KHU-VLL/DeltaDirect">Code</a>
+            <button type="button" class="btn btn-sm fold-toggle" aria-expanded="false" aria-controls="abs-deltadirect">Abstract</button>
+            <button type="button" class="btn btn-sm fold-toggle" aria-expanded="false" aria-controls="bib-deltadirect">BibTeX</button>
+          </div>
           <div class="fold abstract" id="abs-deltadirect" hidden>
             <p>Video Large Language Models (Video-LLMs) have made rapid progress on temporal video understanding, yet many fail at a basic perceptual primitive: signed image-plane motion direction. On simple videos of a single object moving left, right, up, or down, most Video-LLMs perform near chance, with above-chance cases largely attributable to prediction biases rather than genuine direction understanding. We call this failure directional motion blindness. We localize the failure by tracing motion direction information through the Video-LLM pipeline. Motion direction remains linearly accessible from the vision encoder, projector, and LLM hidden states, but the readout fails to bind this signal to the correct verbal answer option, revealing a direction binding gap. Although synthetic motion direction instruction tuning reduces this gap on the source domain, motion direction concept vector analysis shows that visual complexity weakens the signal magnitude and limits out-of-domain generalization. We introduce MoDirect, a dataset family for motion direction instruction tuning and evaluation, and DeltaDirect, a diagnosis-driven, projector-level objective that predicts normalized 2-D motion vectors from adjacent-frame feature deltas. On MoDirect-SynBench, instruction tuning with DeltaDirect improves motion direction accuracy from 25.9% to 85.4%. On MoDirect-RealBench, DeltaDirect improves real-world motion direction accuracy by 21.9 points over the vanilla baseline without real-world tuning data, while preserving standard video-understanding performance.</p>
           </div>
           <div class="fold bib" id="bib-deltadirect" hidden>
 <pre><code>@inproceedings{lee2026deltadirect,
-  title     = {Which Way Did It Move? Diagnosing and
-               Overcoming Directional Motion Blindness
-               in Video-LLMs},
-  author    = {Lee, Jongseo and Lee, Hyuntak and
-               Kim, Sunghun and Kim, Sooa and
-               Chung, Jihoon and Choi, Jinwoo},
-  booktitle = {Advances in Neural Information
-               Processing Systems (NeurIPS)},
+  title     = {Which Way Did It Move? Diagnosing and Overcoming
+               Directional Motion Blindness in Video-LLMs},
+  author    = {Lee, Jongseo and Lee, Hyuntak and Kim, Sunghun and
+               Kim, Sooa and Chung, Jihoon and Choi, Jinwoo},
+  booktitle = {Advances in Neural Information Processing Systems
+               (NeurIPS)},
   year      = {2026}
 }</code></pre>
             <button type="button" class="copy" data-copy aria-live="polite">Copy</button>
           </div>
         </div>
       </article>
-
-      <p class="section-note">* Equal contribution</p>
     </div>
   </section>
 
-  <section class="section" id="contact">
+  <section class="contact-band" id="contact">
     <div class="wrap">
-      <h2>Contact</h2>
-      <div class="prose">
-        <p>The best way to reach me is email: <a href="mailto:hyuntak03.lee@gmail.com">hyuntak03.lee@gmail.com</a>. I'm also on <a href="https://github.com/hyuntak03">GitHub</a> and <a href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a>.</p>
+      <p class="section-label light">Contact</p>
+      <h2>Get in touch</h2>
+      <p class="contact-lead">The best way to reach me is email. I'm happy to talk about video understanding, Video-LLMs, and world models.</p>
+      <div class="contact-links">
+        <a class="btn btn-light" href="mailto:hyuntak03.lee@gmail.com">hyuntak03.lee@gmail.com</a>
+        <a class="btn btn-outline" href="https://github.com/hyuntak03">GitHub</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a>
+        <a class="btn btn-outline" href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>
       </div>
+      <p class="footer-note">Hyuntak Lee · Kyung Hee University · Last updated September 2026</p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
-  <div class="wrap">
-    <p>Hyuntak Lee · Last updated September 2026</p>
-  </div>
-</footer>
+<button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <script src="js/main.js" defer></script>
 </body>

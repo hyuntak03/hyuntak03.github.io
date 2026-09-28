@@ -144,6 +144,7 @@ h1, h2, h3, h4 { color: var(--ink); }
 .btn {
   display: inline-flex;
   align-items: center;
+  gap: 7px;
   padding: 8px 14px;
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -158,6 +159,7 @@ h1, h2, h3, h4 { color: var(--ink); }
 .btn:hover { background: var(--bg-soft); border-color: #c4ccd4; text-decoration: none; color: var(--ink); }
 .btn-primary { background: var(--link); border-color: var(--link); color: #fff; }
 .btn-primary:hover { background: var(--link-hover); border-color: var(--link-hover); color: #fff; }
+.btn .ico { width: 16px; height: 16px; flex-shrink: 0; }
 .btn-sm { padding: 5px 11px; font-size: 13.5px; }
 .btn-sm[aria-expanded="true"] { background: var(--bg-soft); border-color: #c4ccd4; }
 

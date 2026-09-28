@@ -1,27 +1,8 @@
-/* Hyuntak Lee — personal site */
+/* hyuntak03.github.io */
 (function () {
   'use strict';
 
-  var root = document.documentElement;
-
-  /* ---------- theme ---------- */
-
-  function currentTheme() {
-    return root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-  }
-
-  var toggle = document.querySelector('.theme-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function () {
-      var next = currentTheme() === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
-      document.dispatchEvent(new CustomEvent('themechange'));
-    });
-  }
-
-  /* ---------- abstract / bibtex folds ---------- */
-
+  // abstract / bibtex folds
   Array.prototype.forEach.call(document.querySelectorAll('.fold-toggle'), function (btn) {
     var target = document.getElementById(btn.getAttribute('aria-controls'));
     if (!target) return;
@@ -32,6 +13,7 @@
     });
   });
 
+  // copy bibtex
   Array.prototype.forEach.call(document.querySelectorAll('[data-copy]'), function (btn) {
     var pre = btn.parentNode.querySelector('pre');
     if (!pre) return;
@@ -45,25 +27,24 @@
         btn.removeAttribute('data-done');
       }, 1600);
     }
+    function fallback() {
+      var ok = false;
+      try {
+        var range = document.createRange();
+        range.selectNodeContents(pre);
+        var sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        ok = document.execCommand('copy');
+        if (ok) sel.removeAllRanges(); // on failure, leave it selected so Ctrl/Cmd+C works
+      } catch (e) {}
+      done(ok ? 'Copied' : 'Select and copy');
+    }
     btn.addEventListener('click', function () {
-      var text = pre.textContent;
       if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(text).then(function () { done('Copied'); }, function () { fallback(); });
+        navigator.clipboard.writeText(pre.textContent).then(function () { done('Copied'); }, fallback);
       } else {
         fallback();
-      }
-      function fallback() {
-        var ok = false;
-        try {
-          var range = document.createRange();
-          range.selectNodeContents(pre);
-          var sel = window.getSelection();
-          sel.removeAllRanges();
-          sel.addRange(range);
-          ok = document.execCommand('copy');
-          sel.removeAllRanges();
-        } catch (e) {}
-        done(ok ? 'Copied' : 'Select and copy');
       }
     });
   });

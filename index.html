@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.remove('no-js');</script>
 </head>
@@ -41,7 +41,6 @@
   <section class="hero" id="top">
     <div class="wrap hero-grid">
       <div class="hero-text">
-        <p class="overline">Undergraduate researcher</p>
         <h1 class="hero-name">Hyuntak Lee</h1>
         <p class="hero-role">
           B.S. student in Artificial Intelligence, Kyung Hee University<br>
@@ -54,20 +53,6 @@
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a>
           <a class="btn btn-ghost" href="https://vll.khu.ac.kr/">Lab</a>
         </div>
-        <ul class="hero-facts">
-          <li>
-            <span class="fact-label">Latest</span>
-            <span class="fact-value">NeurIPS 2026 · co-first author</span>
-          </li>
-          <li>
-            <span class="fact-label">Lab</span>
-            <span class="fact-value">Vision and Learning Lab, since Sep 2025</span>
-          </li>
-          <li>
-            <span class="fact-label">Now</span>
-            <span class="fact-value">Latent world models</span>
-          </li>
-        </ul>
       </div>
       <figure class="hero-photo">
         <img src="assets/img/profile.svg" alt="Hyuntak Lee" width="260" height="260">
@@ -77,14 +62,13 @@
 
   <section class="section" id="about">
     <div class="wrap">
-      <p class="section-label reveal">About</p>
-      <h2 class="section-title reveal">About me</h2>
+      <h2 class="section-title reveal">About</h2>
 
       <div class="about-grid">
         <div class="about-bio reveal">
           <p>I'm an undergraduate at <strong>Kyung Hee University</strong>, majoring in Artificial Intelligence, where I started in March 2024. Since September 2025 I've been a research intern at the <a href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>, working with <strong>Prof. Jinwoo Choi</strong>.</p>
           <p>My interests are in <strong>trustworthy video understanding</strong>. I care about whether a video model's answer is grounded in what is actually in the video, what its internal representations encode, and where the two come apart. My current work is on <strong>latent world models</strong>.</p>
-          <p>Before that, I worked with Jongseo Lee and others in the lab on motion perception in Video-LLMs: why they fail to tell which way an object moved, and how a small change during instruction tuning recovers most of it (<a href="https://hyuntak03.github.io/DeltaDirect">DeltaDirect</a>, NeurIPS 2026).</p>
+          <p>Before that, I worked with Jongseo Lee and others in the lab on motion perception in Video-LLMs. We showed that most Video-LLMs cannot tell which way an object moved, traced where the direction signal gets lost inside the model, and proposed <a href="https://hyuntak03.github.io/DeltaDirect">DeltaDirect</a>, a lightweight auxiliary objective that largely closes the gap (NeurIPS 2026).</p>
         </div>
 
         <aside class="about-side">
@@ -113,17 +97,14 @@
       <h3 class="sub-title reveal">Research interests</h3>
       <div class="ri-grid">
         <div class="ri-card reveal">
-          <span class="ri-num">01</span>
           <h4>Trustworthy video understanding</h4>
           <p>Video-language models whose answers are grounded in the video and can be checked against it.</p>
         </div>
         <div class="ri-card reveal">
-          <span class="ri-num">02</span>
           <h4>Latent world models</h4>
           <p>Learning representations that capture how a scene changes over time, so a model can reason about what happens next. This is what I'm working on now.</p>
         </div>
         <div class="ri-card reveal">
-          <span class="ri-num">03</span>
           <h4>Diagnosing Video-LLMs</h4>
           <p>Finding where a model's perception breaks, tracing the signal through the pipeline, and fixing it with the smallest change that works.</p>
         </div>
@@ -133,21 +114,20 @@
 
   <section class="section" id="news">
     <div class="wrap">
-      <p class="section-label reveal">News</p>
-      <h2 class="section-title reveal">Recent news</h2>
+      <h2 class="section-title reveal">News</h2>
 
       <ul class="news-list">
         <li class="news-item reveal">
           <time class="news-date" datetime="2026-09">2026.09</time>
           <div class="news-body">
-            <h3>Paper accepted to NeurIPS 2026 <span class="chip chip-venue">NeurIPS 2026</span></h3>
+            <h3>Paper accepted to NeurIPS 2026 <span class="tag">NeurIPS 2026</span></h3>
             <p><em>Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs</em>, co-first-authored with <a href="https://jong980812.github.io/">Jongseo Lee</a>, will appear at NeurIPS 2026.</p>
           </div>
         </li>
         <li class="news-item reveal">
           <time class="news-date" datetime="2026-05">2026.05</time>
           <div class="news-body">
-            <h3>New preprint on arXiv <span class="chip chip-soft">arXiv</span></h3>
+            <h3>New preprint on arXiv <span class="tag">arXiv</span></h3>
             <p>We released <em>Which Way Did It Move?</em> on <a href="https://arxiv.org/abs/2605.22823">arXiv</a>, with a <a href="https://hyuntak03.github.io/DeltaDirect">project page</a> and <a href="https://github.com/KHU-VLL/DeltaDirect">code</a>.</p>
           </div>
         </li>
@@ -164,7 +144,6 @@
 
   <section class="section" id="publications">
     <div class="wrap">
-      <p class="section-label reveal">Publications</p>
       <h2 class="section-title reveal">Publications</h2>
       <h3 class="pub-group reveal">International conferences</h3>
 
@@ -182,7 +161,7 @@
             Jihoon Chung,
             <a href="https://sites.google.com/site/jchoivision/">Jinwoo Choi</a>
           </p>
-          <p class="pub-venue"><span class="chip chip-venue">NeurIPS 2026</span></p>
+          <p class="pub-venue">NeurIPS 2026</p>
           <div class="pub-links">
             <a class="btn btn-sm" href="https://arxiv.org/abs/2605.22823">arXiv</a>
             <a class="btn btn-sm" href="https://hyuntak03.github.io/DeltaDirect">Project page</a>
@@ -212,22 +191,23 @@
     </div>
   </section>
 
-  <section class="contact-band" id="contact">
+  <section class="section" id="contact">
     <div class="wrap">
-      <p class="section-label light">Contact</p>
-      <h2>Get in touch</h2>
-      <p class="contact-lead">The best way to reach me is email. I'm happy to talk about video understanding, Video-LLMs, and world models.</p>
-      <div class="contact-links">
-        <a class="btn btn-light" href="mailto:hyuntak03.lee@gmail.com">hyuntak03.lee@gmail.com</a>
-        <a class="btn btn-outline" href="https://github.com/hyuntak03">GitHub</a>
-        <a class="btn btn-outline" href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a>
-        <a class="btn btn-outline" href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>
+      <h2 class="section-title reveal">Contact</h2>
+      <div class="contact reveal">
+        <p>Email is the best way to reach me: <a href="mailto:hyuntak03.lee@gmail.com">hyuntak03.lee@gmail.com</a></p>
+        <p>You can also find me on <a href="https://github.com/hyuntak03">GitHub</a> and <a href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a>, or at the <a href="https://vll.khu.ac.kr/">Vision and Learning Lab</a> at Kyung Hee University.</p>
       </div>
-      <p class="footer-note">Hyuntak Lee · Kyung Hee University · Last updated September 2026</p>
     </div>
   </section>
 
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Hyuntak Lee · Last updated September 2026</p>
+  </div>
+</footer>
 
 <button type="button" class="to-top" id="toTop" aria-label="Back to top" hidden>
   <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>

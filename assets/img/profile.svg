@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360">
-  <rect width="360" height="360" fill="#e6eef8"/>
-  <text x="180" y="214" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="132" font-weight="600" fill="#14508a" letter-spacing="-4">HL</text>
+  <rect width="360" height="360" fill="#eef1f4"/>
+  <circle cx="180" cy="140" r="62" fill="#c9d1d9"/>
+  <path d="M60 330c10-70 60-105 120-105s110 35 120 105z" fill="#c9d1d9"/>
 </svg>

@@ -3,13 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
 <title>Hyuntak Lee</title>
-<meta name="description" content="Hyuntak Lee is an undergraduate student at Kyung Hee University and a research intern at the Vision and Learning Lab, working on video understanding and Video-LLMs.">
+<meta name="description" content="Hyuntak Lee is an undergraduate at Kyung Hee University and a research intern at the Vision and Learning Lab, working on trustworthy video understanding.">
 <meta name="author" content="Hyuntak Lee">
 <link rel="canonical" href="https://hyuntak03.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hyuntak Lee">
-<meta property="og:description" content="Undergraduate researcher at Kyung Hee University working on video understanding and Video-LLMs.">
+<meta property="og:description" content="Undergraduate researcher at Kyung Hee University working on trustworthy video understanding.">
 <meta property="og:url" content="https://hyuntak03.github.io/">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,8 +21,7 @@
   // Apply a saved theme before first paint so there is no flash.
   (function () {
     try {
-      var t = localStorage.getItem('theme');
-      if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
     } catch (e) {}
   })();
 </script>
@@ -57,14 +57,15 @@
       <div class="intro-text">
         <h1>Hyuntak Lee</h1>
         <p class="role">
-          Undergraduate student, Kyung Hee University<br>
-          Research intern at the <a href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>,
+          B.S. student, Kyung Hee University<br>
+          Undergraduate research intern at the <a href="https://vll.khu.ac.kr/">Vision and Learning Lab</a>,
           advised by <a href="https://sites.google.com/site/jchoivision/">Jinwoo Choi</a>
         </p>
-        <p class="lede">I study how video-language models perceive motion, and why they so often get it wrong.</p>
+        <p class="lede">I work on trustworthy video understanding: video models whose answers reflect what actually happens on screen. These days I'm working on latent world models.</p>
         <ul class="links" aria-label="Links">
           <li><a href="mailto:hyuntak03.lee@gmail.com">Email</a></li>
           <li><a href="https://github.com/hyuntak03">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a></li>
           <li><a href="https://vll.khu.ac.kr/">Lab</a></li>
         </ul>
       </div>
@@ -79,16 +80,38 @@
     <div class="wrap">
       <h2>About</h2>
       <div class="prose">
-        <p>I'm an undergraduate at Kyung Hee University. Since September 2025 I've been a research intern at the Vision and Learning Lab, where I work with Prof. Jinwoo Choi on video understanding.</p>
-        <p>What I find interesting is the gap between what a model represents and what it can say. Motion direction is a clean example. Whether an object moved left, right, up, or down is a basic perceptual fact, and it is linearly decodable from a Video-LLM's hidden states. Yet most models answer "which way did it move?" at close to chance. My recent work traced where that signal is lost on the way to the answer, and showed that a small, targeted training objective is enough to recover it.</p>
-        <p>I like research that starts with a careful diagnosis and keeps the fix as small as the diagnosis allows.</p>
+        <p>I'm an undergraduate at Kyung Hee University, where I started my B.S. in March 2024. Since September 2025 I've been a research intern at the Vision and Learning Lab, working with Prof. Jinwoo Choi.</p>
+        <p>My interests are in trustworthy video understanding. I care about whether a video model's answer is grounded in what is actually in the video, what its internal representations encode, and where the two come apart. My current work is on latent world models. Before that, I worked on motion perception in Video-LLMs: why they fail to tell which way an object moved, and how a small change in training fixes it (DeltaDirect, NeurIPS 2026).</p>
       </div>
-      <dl class="facts">
-        <div>
-          <dt>Interests</dt>
-          <dd>Video understanding, Video-LLMs, interpretability, motion perception</dd>
-        </div>
-      </dl>
+
+      <h3 class="sub">Research interests</h3>
+      <ul class="interests">
+        <li><strong>Trustworthy video understanding.</strong> Video-language models whose answers are grounded in the video and can be checked against it.</li>
+        <li><strong>Latent world models.</strong> Learning representations that capture how a scene changes over time, so a model can reason about what happens next. This is what I'm working on now.</li>
+        <li><strong>Diagnosing Video-LLMs.</strong> Finding where a model's perception breaks, tracing the signal through the pipeline, and fixing it with the smallest change that works.</li>
+      </ul>
+
+      <h3 class="sub">Education</h3>
+      <ul class="cv">
+        <li>
+          <!-- TODO: add the department, e.g. "B.S. in Computer Science" -->
+          <time>Mar 2024 – present</time>
+          <div>
+            <strong>B.S., Kyung Hee University</strong>
+          </div>
+        </li>
+      </ul>
+
+      <h3 class="sub">Experience</h3>
+      <ul class="cv">
+        <li>
+          <time>Sep 2025 – present</time>
+          <div>
+            <strong>Undergraduate research intern, Vision and Learning Lab</strong>
+            <span>Kyung Hee University · Advisor: Prof. Jinwoo Choi</span>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 
@@ -98,15 +121,24 @@
       <ul class="news">
         <li>
           <time datetime="2026-09">Sep 2026</time>
-          <p>Our paper <em>Which Way Did It Move?</em> was accepted to NeurIPS 2026.</p>
+          <div>
+            <strong>Paper accepted to NeurIPS 2026.</strong>
+            <p><em>Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs</em>, co-first-authored with Jongseo Lee, will appear at NeurIPS 2026.</p>
+          </div>
         </li>
         <li>
           <time datetime="2026-05">May 2026</time>
-          <p>The preprint on directional motion blindness in Video-LLMs is on <a href="https://arxiv.org/abs/2605.22823">arXiv</a>, with a <a href="https://hyuntak03.github.io/DeltaDirect">project page</a>.</p>
+          <div>
+            <strong>New preprint on arXiv.</strong>
+            <p>We released <em>Which Way Did It Move?</em> on <a href="https://arxiv.org/abs/2605.22823">arXiv</a>, with a <a href="https://hyuntak03.github.io/DeltaDirect">project page</a> and <a href="https://github.com/KHU-VLL/DeltaDirect">code</a>.</p>
+          </div>
         </li>
         <li>
           <time datetime="2025-09">Sep 2025</time>
-          <p>Joined the Vision and Learning Lab at Kyung Hee University as an undergraduate research intern.</p>
+          <div>
+            <strong>Joined the Vision and Learning Lab.</strong>
+            <p>Started as an undergraduate research intern at Kyung Hee University, advised by Prof. Jinwoo Choi.</p>
+          </div>
         </li>
       </ul>
     </div>
@@ -117,12 +149,14 @@
       <h2>Publications</h2>
       <p class="section-note"><sup>*</sup> equal contribution</p>
 
+      <h3 class="sub">International conferences</h3>
+
       <article class="pub">
         <a class="pub-thumb" href="https://hyuntak03.github.io/DeltaDirect" tabindex="-1" aria-hidden="true">
           <img src="assets/img/pub/deltadirect.png" alt="" width="1200" height="900" loading="lazy">
         </a>
         <div class="pub-body">
-          <h3 class="pub-title"><a href="https://hyuntak03.github.io/DeltaDirect">Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs</a></h3>
+          <h4 class="pub-title"><a href="https://hyuntak03.github.io/DeltaDirect">Which Way Did It Move? Diagnosing and Overcoming Directional Motion Blindness in Video-LLMs</a></h4>
           <p class="pub-authors">
             <a href="https://jong980812.github.io/">Jongseo Lee</a><sup>*</sup>,
             <strong>Hyuntak Lee</strong><sup>*</sup>,
@@ -132,14 +166,17 @@
             <a href="https://sites.google.com/site/jchoivision/">Jinwoo Choi</a>
           </p>
           <p class="pub-venue"><span class="venue">NeurIPS 2026</span></p>
-          <p class="pub-summary">Most Video-LLMs cannot tell which way a single object moved, even though the direction is linearly decodable from their hidden states. We trace where the signal is lost and add DeltaDirect, a small projector-level objective that predicts 2-D motion vectors from adjacent-frame feature deltas. Synthetic motion-direction accuracy goes from 25.9% to 85.4%, and real-world accuracy improves by 21.9 points with no real-world tuning data.</p>
           <ul class="pub-links">
             <li><a href="https://arxiv.org/abs/2605.22823">arXiv</a></li>
             <li><a href="https://hyuntak03.github.io/DeltaDirect">Project page</a></li>
             <li><a href="https://github.com/KHU-VLL/DeltaDirect">Code</a></li>
-            <li><button type="button" class="linklike bib-toggle" aria-expanded="false" aria-controls="bib-deltadirect">BibTeX</button></li>
+            <li><button type="button" class="linklike fold-toggle" aria-expanded="false" aria-controls="abs-deltadirect">Abstract</button></li>
+            <li><button type="button" class="linklike fold-toggle" aria-expanded="false" aria-controls="bib-deltadirect">BibTeX</button></li>
           </ul>
-          <div class="bib" id="bib-deltadirect" hidden>
+          <div class="fold abstract" id="abs-deltadirect" hidden>
+            <p>Video Large Language Models (Video-LLMs) have made rapid progress on temporal video understanding, yet many fail at a basic perceptual primitive: signed image-plane motion direction. On simple videos of a single object moving left, right, up, or down, most Video-LLMs perform near chance, with above-chance cases largely attributable to prediction biases rather than genuine direction understanding. We call this failure directional motion blindness. We localize the failure by tracing motion direction information through the Video-LLM pipeline. Motion direction remains linearly accessible from the vision encoder, projector, and LLM hidden states, but the readout fails to bind this signal to the correct verbal answer option, revealing a direction binding gap. Although synthetic motion direction instruction tuning reduces this gap on the source domain, motion direction concept vector analysis shows that visual complexity weakens the signal magnitude and limits out-of-domain generalization. We introduce MoDirect, a dataset family for motion direction instruction tuning and evaluation, and DeltaDirect, a diagnosis-driven, projector-level objective that predicts normalized 2-D motion vectors from adjacent-frame feature deltas. On MoDirect-SynBench, instruction tuning with DeltaDirect improves motion direction accuracy from 25.9% to 85.4%. On MoDirect-RealBench, DeltaDirect improves real-world motion direction accuracy by 21.9 points over the vanilla baseline without real-world tuning data, while preserving standard video-understanding performance.</p>
+          </div>
+          <div class="fold bib" id="bib-deltadirect" hidden>
 <pre><code>@inproceedings{lee2026deltadirect,
   title     = {Which Way Did It Move? Diagnosing and Overcoming
                Directional Motion Blindness in Video-LLMs},
@@ -156,62 +193,11 @@
     </div>
   </section>
 
-  <section class="section" id="demo">
-    <div class="wrap">
-      <h2>Which way did it move?</h2>
-      <div class="prose">
-        <p>This is the task from the paper, reduced to its simplest form. A single object moves in one of four directions. Watch the clip, then answer.</p>
-      </div>
-      <div class="demo" data-demo>
-        <div class="demo-stage">
-          <canvas width="480" height="300" aria-label="A short clip of a moving dot" role="img"></canvas>
-          <button type="button" class="demo-play">Play clip</button>
-        </div>
-        <div class="demo-panel">
-          <p class="demo-prompt" aria-live="polite">Press play to start.</p>
-          <div class="demo-choices" role="group" aria-label="Your answer">
-            <button type="button" data-dir="left" disabled>Left</button>
-            <button type="button" data-dir="right" disabled>Right</button>
-            <button type="button" data-dir="up" disabled>Up</button>
-            <button type="button" data-dir="down" disabled>Down</button>
-          </div>
-          <p class="demo-score" aria-live="polite"></p>
-        </div>
-      </div>
-      <div class="prose">
-        <p class="demo-note">On our synthetic benchmark, LLaVA-Video-7B answers this correctly 25.9% of the time, which is about chance. With DeltaDirect, it reaches 85.4%.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="experience">
-    <div class="wrap">
-      <h2>Experience</h2>
-      <ul class="cv">
-        <li>
-          <time>Sep 2025 – present</time>
-          <div>
-            <strong>Vision and Learning Lab, Kyung Hee University</strong>
-            <span>Undergraduate research intern. Advisor: Prof. Jinwoo Choi.</span>
-          </div>
-        </li>
-        <li>
-          <!-- TODO: add department and expected graduation, e.g. "B.S. in Computer Science, 2023 – 2027 (expected)" -->
-          <time>Undergraduate</time>
-          <div>
-            <strong>Kyung Hee University</strong>
-            <span>B.S. student</span>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
-
   <section class="section" id="contact">
     <div class="wrap">
       <h2>Contact</h2>
       <div class="prose">
-        <p>The best way to reach me is email: <a href="mailto:hyuntak03.lee@gmail.com">hyuntak03.lee@gmail.com</a>. I'm also on <a href="https://github.com/hyuntak03">GitHub</a>.</p>
+        <p>The best way to reach me is email: <a href="mailto:hyuntak03.lee@gmail.com">hyuntak03.lee@gmail.com</a>. I'm also on <a href="https://github.com/hyuntak03">GitHub</a> and <a href="https://www.linkedin.com/in/hyuntak-lee-7417a12a5/">LinkedIn</a>.</p>
       </div>
     </div>
   </section>
